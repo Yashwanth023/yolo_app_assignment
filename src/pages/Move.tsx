@@ -1,23 +1,15 @@
 
 import React from "react";
-import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const Index = () => {
+const Move = () => {
   const navigate = useNavigate();
 
-  const subscriptions = [
-    {
-      name: "Subscription Plan 1",
-      description: "Description",
-      cost: "123$"
-    },
-    {
-      name: "Subscription Plan 2",
-      description: "Description",
-      cost: "123$"
-    }
+  const documents = [
+    { name: "Driving License", path: "/document/driving-license" },
+    { name: "Electoral Role", path: "/document/electoral-role" },
   ];
 
   return (
@@ -36,87 +28,72 @@ const Index = () => {
         </div>
       </div>
 
-      {/* API Login Button */}
+      {/* Moving House Card */}
       <div className="px-4 py-2">
-        <Button 
-          className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
-          onClick={() => navigate("/login")}
-        >
-          Login for Council and Hospital APIs
-        </Button>
-      </div>
-
-      {/* Well-being Check Button */}
-      <div className="px-4 py-2">
-        <Button 
-          className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
-        >
-          Check your Well-Being
-        </Button>
-      </div>
-
-      {/* Card Management Button */}
-      <div className="px-4 py-2">
-        <Button 
-          className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
-        >
-          Branding and Community Card Management
-        </Button>
-      </div>
-
-      {/* Offers Card */}
-      <div className="px-4 py-2">
-        <div className="bg-teal-500 rounded-lg p-4 text-white relative">
-          <div className="absolute right-4 top-4 flex space-x-1">
-            <div className="h-2 w-2 rounded-full bg-white opacity-50"></div>
-            <div className="h-2 w-2 rounded-full bg-white"></div>
-            <div className="h-2 w-2 rounded-full bg-white opacity-50"></div>
-          </div>
-          <h2 className="text-xl font-bold">Offers and Benefits</h2>
-          <p className="mt-1 text-sm">
-            Personalised offers and discounts details
+        <div className="bg-teal-500 rounded-lg p-4 text-white">
+          <h2 className="text-2xl font-bold">Moving House?</h2>
+          <p className="mt-2">
+            Answer some questions and seamlessly manage address change and utilities
           </p>
           <Button 
             className="mt-4 bg-white text-teal-500 hover:bg-gray-100"
+            onClick={() => navigate("/register-change")}
           >
-            Avail Now
+            Register Change
           </Button>
         </div>
       </div>
 
-      {/* Subscription Plans */}
-      {subscriptions.map((sub, index) => (
-        <div key={index} className="px-4 py-2">
-          <div className="border-b border-gray-200 pb-3">
-            <div className="flex justify-between">
-              <div>
-                <div className="text-xs text-gray-500">Plan</div>
-                <div className="text-teal-500 font-medium">{sub.name}</div>
-                <div className="text-sm text-gray-600">{sub.description}</div>
-              </div>
-              <div className="text-right">
-                <div className="text-xs text-gray-500">Cost</div>
-                <div className="text-gray-600">{sub.cost}</div>
-              </div>
-            </div>
-          </div>
+      {/* Notify/Manage Section */}
+      <div className="px-4 py-2">
+        <h3 className="text-gray-600 mb-2">Notify/Manage:</h3>
+        <div className="grid grid-cols-2 gap-3">
+          <Button 
+            variant="outline"
+            className="border border-teal-500 text-teal-500 hover:bg-teal-50"
+          >
+            Electricity
+          </Button>
+          <Button
+            variant="outline"
+            className="border border-teal-500 text-teal-500 hover:bg-teal-50"
+          >
+            Water
+          </Button>
+          <Button
+            variant="outline"
+            className="border border-teal-500 text-teal-500 hover:bg-teal-50"
+          >
+            Internet
+          </Button>
+          <Button
+            variant="outline"
+            className="border border-teal-500 text-teal-500 hover:bg-teal-50"
+          >
+            Bank
+          </Button>
         </div>
-      ))}
+      </div>
 
-      {/* Action Buttons */}
-      <div className="px-4 py-2 grid grid-cols-2 gap-4">
-        <Button
-          variant="outline"
-          className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
-        >
-          Check loaded points
-        </Button>
-        <Button
-          variant="outline" 
-          className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
-        >
-          Connect to Payment
-        </Button>
+      {/* Register/Update Documents */}
+      <div className="px-4 py-2">
+        <div className="bg-white rounded-lg p-4 shadow-sm">
+          <h3 className="text-xl font-semibold text-teal-600 mb-4">Register/Update Documents:</h3>
+          {documents.map((doc, index) => (
+            <div 
+              key={index}
+              className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0"
+            >
+              <span className="text-gray-600">{doc.name}</span>
+              <button 
+                onClick={() => navigate(doc.path)}
+                className="text-gray-400"
+              >
+                →
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* AI Help Section */}
@@ -167,4 +144,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Move;
