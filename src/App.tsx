@@ -7,10 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "./components/layout/AppLayout";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import SchedulePage from "./pages/Schedule";
-import NewsPage from "./pages/News";
-import MusicPage from "./pages/Music";
-import SettingsPage from "./pages/Settings";
+import ChatPage from "./pages/Chat";
+import PostPage from "./pages/Post";
+import ActivityPage from "./pages/Activity";
+import ProfilePage from "./pages/Profile";
 
 const queryClient = new QueryClient();
 
@@ -30,34 +30,34 @@ const App = () => (
             } 
           />
           <Route 
-            path="/schedule" 
+            path="/chat" 
             element={
               <AppLayout>
-                <SchedulePage />
+                <ChatPage />
               </AppLayout>
             } 
           />
           <Route 
-            path="/news" 
+            path="/post" 
             element={
               <AppLayout>
-                <NewsPage />
+                <PostPage />
               </AppLayout>
             } 
           />
           <Route 
-            path="/music" 
+            path="/activity" 
             element={
               <AppLayout>
-                <MusicPage />
+                <ActivityPage />
               </AppLayout>
             } 
           />
           <Route 
-            path="/settings" 
+            path="/profile" 
             element={
               <AppLayout>
-                <SettingsPage />
+                <ProfilePage />
               </AppLayout>
             } 
           />

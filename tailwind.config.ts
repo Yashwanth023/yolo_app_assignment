@@ -53,24 +53,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				modus: {
-					primary: "#121212",
-					secondary: "#1A1A1A",
-					accent: "#6C63FF",
-					text: "#FFFFFF",
-					textSecondary: "#999999",
-					border: "#323232"
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
