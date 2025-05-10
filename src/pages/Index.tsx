@@ -3,9 +3,49 @@ import React from "react";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
   const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
+  const handleWellbeingCheck = () => {
+    toast({
+      title: "Well-being Check",
+      description: "Your well-being assessment will start soon",
+    });
+  };
+
+  const handleBrandingManagement = () => {
+    toast({
+      title: "Branding Management",
+      description: "Community card management tool loading...",
+    });
+  };
+
+  const handleAvailNow = () => {
+    toast({
+      title: "Offer Claimed",
+      description: "You have successfully availed this offer!",
+    });
+  };
+
+  const handleCheckPoints = () => {
+    toast({
+      title: "Points Balance",
+      description: "You have 250 points available",
+    });
+  };
+
+  const handleConnectPayment = () => {
+    toast({
+      title: "Payment Connection",
+      description: "Connecting to payment gateway...",
+    });
+  };
 
   const subscriptions = [
     {
@@ -40,7 +80,7 @@ const Index = () => {
       <div className="px-4 py-2">
         <Button 
           className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
-          onClick={() => navigate("/login")}
+          onClick={handleLoginClick}
         >
           Login for Council and Hospital APIs
         </Button>
@@ -50,6 +90,7 @@ const Index = () => {
       <div className="px-4 py-2">
         <Button 
           className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
+          onClick={handleWellbeingCheck}
         >
           Check your Well-Being
         </Button>
@@ -59,6 +100,7 @@ const Index = () => {
       <div className="px-4 py-2">
         <Button 
           className="w-full border border-teal-500 text-teal-500 bg-white hover:bg-teal-50"
+          onClick={handleBrandingManagement}
         >
           Branding and Community Card Management
         </Button>
@@ -78,6 +120,7 @@ const Index = () => {
           </p>
           <Button 
             className="mt-4 bg-white text-teal-500 hover:bg-gray-100"
+            onClick={handleAvailNow}
           >
             Avail Now
           </Button>
@@ -108,12 +151,14 @@ const Index = () => {
         <Button
           variant="outline"
           className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
+          onClick={handleCheckPoints}
         >
           Check loaded points
         </Button>
         <Button
           variant="outline" 
           className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
+          onClick={handleConnectPayment}
         >
           Connect to Payment
         </Button>

@@ -3,8 +3,51 @@ import React from "react";
 import { Search, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
+import { useNavigate } from "react-router-dom";
+import { toast } from "@/hooks/use-toast";
 
 const Community = () => {
+  const navigate = useNavigate();
+
+  const handlePostSubmit = () => {
+    toast({
+      title: "Success",
+      description: "Your post has been submitted!",
+    });
+  };
+
+  const handleAIBotClick = () => {
+    toast({
+      title: "AI Bot",
+      description: "AI Bot functionality coming soon!",
+    });
+  };
+
+  const handlePatternForecastClick = () => {
+    toast({
+      title: "Pattern Forecast",
+      description: "Pattern forecast data is being processed.",
+    });
+  };
+
+  const handleLike = () => {
+    toast({
+      description: "Post liked!",
+    });
+  };
+
+  const handleComment = () => {
+    toast({
+      description: "Comment added!",
+    });
+  };
+
+  const handleShare = () => {
+    toast({
+      description: "Post shared!",
+    });
+  };
+
   return (
     <div className="bg-white text-gray-800 pb-16">
       {/* Search Bar */}
@@ -32,7 +75,7 @@ const Community = () => {
             placeholder="Post Something..."
             className="flex-1 bg-gray-100 border-0 rounded-md py-2 px-3"
           />
-          <button className="text-teal-500">
+          <button className="text-teal-500" onClick={handlePostSubmit}>
             <Send size={20} />
           </button>
         </div>
@@ -43,12 +86,14 @@ const Community = () => {
         <Button
           variant="outline"
           className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
+          onClick={handleAIBotClick}
         >
           AI Bot
         </Button>
         <Button
           variant="outline" 
           className="border border-teal-500 text-teal-500 hover:bg-teal-50 font-medium"
+          onClick={handlePatternForecastClick}
         >
           Pattern Forecast
         </Button>
@@ -75,11 +120,13 @@ const Community = () => {
           </div>
 
           <div className="mb-2">
-            <img 
-              src="/lovable-uploads/64dea782-854e-482c-b7bd-b2e8172c3047.png" 
-              alt="Post" 
-              className="w-full rounded-md"
-            />
+            <div className="w-full h-48 bg-gray-200 rounded-md overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1517022812141-23620dba5c23" 
+                alt="Post" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           <div className="mb-3">
@@ -102,19 +149,19 @@ const Community = () => {
           </div>
 
           <div className="flex justify-between border-t border-gray-200 pt-2">
-            <Button variant="ghost" className="flex-1 text-teal-500">
+            <Button variant="ghost" className="flex-1 text-teal-500" onClick={handleLike}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
               </svg>
               Like
             </Button>
-            <Button variant="ghost" className="flex-1 text-teal-500">
+            <Button variant="ghost" className="flex-1 text-teal-500" onClick={handleComment}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
               Comment
             </Button>
-            <Button variant="ghost" className="flex-1 text-teal-500">
+            <Button variant="ghost" className="flex-1 text-teal-500" onClick={handleShare}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
               </svg>

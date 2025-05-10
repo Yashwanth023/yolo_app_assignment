@@ -46,15 +46,15 @@ const SignUp = () => {
 
   const handleGoogleSignUp = () => {
     toast({
-      title: "Info",
-      description: "Google signup not implemented in this demo",
+      title: "Google Sign Up",
+      description: "Google signup initiated (demo only)",
     });
   };
 
   const handleFacebookSignUp = () => {
     toast({
-      title: "Info",
-      description: "Facebook signup not implemented in this demo",
+      title: "Facebook Sign Up",
+      description: "Facebook signup initiated (demo only)",
     });
   };
 
@@ -129,11 +129,25 @@ const SignUp = () => {
         </form>
 
         <div className="mt-8 flex justify-center space-x-4">
-          <button onClick={handleGoogleSignUp} className="p-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" className="h-8 w-8" />
+          <button 
+            onClick={handleGoogleSignUp} 
+            className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
+          >
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" 
+              alt="Google" 
+              className="h-8 w-8" 
+            />
           </button>
-          <button onClick={handleFacebookSignUp} className="p-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" className="h-8 w-8" />
+          <button 
+            onClick={handleFacebookSignUp} 
+            className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
+          >
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+              alt="Facebook" 
+              className="h-8 w-8" 
+            />
           </button>
         </div>
 
