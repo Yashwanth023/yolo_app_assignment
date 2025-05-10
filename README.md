@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
 
-## Project info
+# YOLO Mobile App
 
-**URL**: https://lovable.dev/projects/7b07e12a-a2fc-4c2a-b570-55cafdc22a7f
+## Project Overview
 
-## How can I edit this code?
+YOLO is a comprehensive mobile application designed to enhance social connectivity and community engagement. Built with React, TypeScript, and Tailwind CSS, the app provides a seamless user experience across various features including social networking, local business discovery, community news, and personalized content.
 
-There are several ways of editing your application.
+## Key Features
 
-**Use Lovable**
+### Authentication System
+- Email and password authentication
+- Social login integration with Google and Facebook (UI components)
+- Secure user session management using local storage
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7b07e12a-a2fc-4c2a-b570-55cafdc22a7f) and start prompting.
+### Social Networking
+- User profiles with customizable details
+- Activity feed to track interactions
+- Messaging system for direct communication
+- Post creation and sharing capabilities
 
-Changes made via Lovable will be committed automatically to this repo.
+### Community Features
+- Local business directory with verified listings
+- Community news and event updates
+- Local council information and calendar
+- Move services for relocation assistance
 
-**Use your preferred IDE**
+### User Interface
+- Clean, modern design with teal accent colors
+- Responsive layout optimized for mobile devices
+- Intuitive navigation with bottom tab bar
+- Animated transitions for smoother user experience
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Technical Implementation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Front-End Development
+- React with TypeScript for type-safe code
+- React Router for seamless navigation
+- Tailwind CSS for responsive styling
+- Shadcn UI components for consistent design
+- Lucide React for scalable vector icons
 
-Follow these steps:
+### State Management
+- React Context API for global state management
+- Local storage for persistent data and authentication
+- React Query for efficient data fetching and caching
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Performance Optimization
+- Component-based architecture for modularity
+- Lazy loading of routes for faster initial load
+- Optimized asset delivery for mobile devices
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Development Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
+- Node.js (v16 or above)
+- npm or yarn package manager
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Installation
+1. Clone the repository
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the development server: `npm run dev` or `yarn dev`
+4. Access the application at `http://localhost:5173`
 
-**Edit a file directly in GitHub**
+### Project Structure
+- `src/components`: Reusable UI components
+- `src/context`: Global state management
+- `src/hooks`: Custom React hooks
+- `src/pages`: Main application screens
+- `src/utils`: Helper functions and utilities
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## User Flow
 
-**Use GitHub Codespaces**
+1. Welcome screen with Sign In and Sign Up options
+2. Authentication screens for user login/registration
+3. Main home screen with personalized content
+4. Navigation to specialized sections:
+   - Community for social interactions
+   - Move for relocation services
+   - Local Business for discovering nearby services
+   - Local Council for community information
+5. Profile management and settings
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Future Enhancements
 
-## What technologies are used for this project?
+- Real-time notifications for user interactions
+- Enhanced search functionality across all content types
+- User preference settings for personalized experience
+- In-app user rewards and loyalty program
+- Integration with mapping services for location-based features
 
-This project is built with:
+## Credits
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7b07e12a-a2fc-4c2a-b570-55cafdc22a7f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Design and concept based on the YOLO application template, implemented as a functional web application using modern web technologies.

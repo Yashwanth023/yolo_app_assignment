@@ -10,11 +10,7 @@ const Welcome = () => {
     <div className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-teal-50 to-teal-500">
       <div className="w-full flex-1 flex flex-col items-center justify-center px-6">
         <div className="mb-16">
-          <img 
-            src="/lovable-uploads/1aba0f37-a68e-43fa-94b6-b91c3a21ecfd.png" 
-            alt="Yolo Logo" 
-            className="h-20"
-          />
+          <h1 className="text-5xl font-bold text-teal-700">YOLO</h1>
         </div>
         
         <div className="w-full max-w-md space-y-4">
