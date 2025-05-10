@@ -1,4 +1,3 @@
-
 # YOLO Mobile App
 
 ## Project Overview
